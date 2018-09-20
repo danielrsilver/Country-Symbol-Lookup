@@ -7,13 +7,13 @@ class Report
 
   def run
     Prawn::Document.generate("country_report.pdf") do |pdf|
-      pdf.text @country.name
+      pdf.text "Country: #{@country.name}"
       pdf.move_down 20
       pdf.text "Currency: #{@country.currency.name}"
       if @country.states.any?
         pdf.move_down 20
         pdf.text "States:"
-        pdf.move_down 20
+        pdf.move_down 10
         @country.states.each do |code, state|
           pdf.text state["name"]
         end
