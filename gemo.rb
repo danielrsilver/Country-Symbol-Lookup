@@ -12,5 +12,5 @@ if country
   Report.new(country).run
   puts "For a full report, open country_report.pdf"
 else
-  puts "Could not find a country called #{country_name}"
+  puts "Could not find a country called #{country_name}.  Please check your spelling and try again."
 end
